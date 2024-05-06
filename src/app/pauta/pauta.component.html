@@ -1,0 +1,11 @@
+<div *ngFor="let pauta of pautas" class="pauta-container">
+  <div class="pauta-info">
+    <p>{{ pauta.titulo }} - Votos: {{ pauta.quantidadeVotos }}</p>
+    <button (click)="votar(pauta)">Votar</button>
+  </div>
+</div>
+<div class="buttons">
+  <button (click)="cadastrarPauta()">Cadastrar Pauta</button>
+  <button (click)="cadastrarUsuario()">Cadastrar Usuário</button>
+</div>
+

@@ -1,0 +1,10 @@
+<div *ngIf="pauta" class="pautas">
+    <label>Votar na pauta: {{ pauta.titulo }} - </label>
+    <label><input type="radio" name="opcao" value="SIM" [(ngModel)]="opcaoVoto"> Sim</label>
+    <label><input type="radio" name="opcao" value="NAO" [(ngModel)]="opcaoVoto"> Não</label>
+      <div class="buttons">
+        <button (click)="confirmarVoto()"  [disabled]="timerRunning">Confirmar Voto</button>
+        <button (click)="voltar()">voltar</button>
+      </div>
+      <p *ngIf="feedbackMsg">{{ feedbackMsg }}</p>
+</div>

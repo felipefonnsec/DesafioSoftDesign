@@ -1,0 +1,13 @@
+<div class="input-container">
+  <div class="content1">
+    <form (ngSubmit)="cadastraPauta()">
+      <label for="titulo">Pauta:</label>
+      <input type="text" id="titulo" name="titulo" [(ngModel)]="titulo" required>
+      <div class="buttons">
+        <button type="submit">cadastrar</button>
+        <button (click)="voltar()">voltar</button>
+      </div>
+    </form>
+  </div>
+  <p *ngIf="feedbackMsg">{{ feedbackMsg }}</p>
+</div>
